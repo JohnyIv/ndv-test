@@ -1,0 +1,804 @@
+@import blocks/mixin/fonts.sass
+
+body
+  font-family: 'CP-Regular', sans-serif
+  margin: 0
+  color: #2D2D2D
+button
+  border: none
+  border-radius: 0
+p
+  margin: 0
+header
+  height: 86px
+  background-color: #0B351D
+  display: flex
+  align-items: center
+  padding: 0 9.8667% 0 10.1333%
+  .tel-block
+    display: none
+logo-wrap
+  width: 97px
+  height: 62px
+.btn-new-order
+  margin-left: auto
+  height: 40px
+  background-color: #E3CEA3
+  font-size: 12px
+  line-height: 15px
+  color: #2B2B2B
+  font-family: "CP-Bold", sans-serif
+  text-transform: uppercase
+.btn-mobile-menu
+  margin-left: 6px
+  height: 40px
+  width: 40px
+  background-color: #9FC460
+  display: flex
+  align-items: center
+  justify-content: center
+  transition-duration: 300ms
+  &.active
+    background: transparent
+    .img-btn
+      background: transparent
+      &:before,&:after
+        background-color: #E3CEA3
+        top: 0
+      &:before
+        transform: rotate(45deg)
+      &:after
+        transform: rotate(-45deg)
+  .img-btn
+    width: 14px
+    height: 2px
+    background: #234934
+    position: relative
+    &:after,&:before
+      content: ''
+      position: absolute
+      width: 14px
+      height: 2px
+      background-color: #234934
+      transition-duration: 300ms
+    &:after
+      top: 5px
+      left: 0
+    &:before
+      top: -5px
+      left: 0
+.main-img-block
+  background-image: url("../img/main-img.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  height: 495px
+  color: #FFFFFF
+  display: flex
+  flex-direction: column
+  position: relative
+.mobile-menu
+  background-color: #0B351D
+  height: 100%
+  position: absolute
+  width: 100%
+  padding: 30px 9.8667% 20px 27.2%
+  box-sizing: border-box
+  z-index: 2
+  transform: translateX(-100%)
+  transition-duration: 300ms
+  &.active
+    transform: translateX(0)
+  .menu-parts
+    color: #E3CEA3
+    font-size: 15px
+    font-family: "CP-Bold", sans-serif
+    margin: 0
+    list-style: none
+    padding: 0
+    width: fit-content
+    .menu-parts-items
+      height: 38px
+      line-height: 38px
+      width: fit-content
+      letter-spacing: 1px
+  .interes-link-wrap
+    margin-top: 24px
+    color: #9FC460
+    margin-left: 30px
+    .camera-link
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        display: block
+        width: 17px
+        height: 14px
+        background-image: url("../img/cctv.svg")
+        left: -29px
+        top: 5px
+    .virtual-tour-link
+      position: relative
+      margin-top: 7px
+      &:before
+        content: ""
+        position: absolute
+        display: block
+        width: 18px
+        height: 17px
+        background-image: url("../img/360.svg")
+        left: -30px
+        top: 3px
+  .tel-block
+    margin-top: 15px
+    .tel-link-call
+      color: #E3CEA3
+      font-size: 22px
+      letter-spacing: 1px
+      font-family: "CP-Bold", sans-serif
+      text-decoration: none
+    .link-callback
+      color: #9FC460
+      font-size: 14px
+      letter-spacing: 1px
+      font-family: "CP-Bold", sans-serif
+      text-decoration: none
+  .adress-block-top
+    margin-top: 15px
+    .adress
+      margin-left: 0
+      font-family: "CP-Bold", sans-serif
+      span
+        width: 100%
+        display: block
+.prod-text-wrap
+  margin: auto 10% 20px 10.1333%
+  .prod-text-start
+    font-size: 36px
+    line-height: 45px
+    color: #E3CEA3
+    font-family: "CP-Bold", sans-serif
+    margin-bottom: 5px
+    &:before
+      content: ""
+      display: block
+      width: 64px
+      height: 43px
+      background-image: url("../img/tree-icon.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      margin-bottom: 14px
+  .prod-text-opt
+    font-size: 26px
+    line-height: 26px
+    font-family: "CP-Bold", sans-serif
+    span:nth-of-type(1)
+      font-family: "CP-Bold", sans-serif
+      font-size: 48px
+      line-height: 46px
+    span:nth-of-type(2)
+      font-family: "CP-Regular", sans-serif
+      line-height: 26px
+.mobile-img-footer
+  height: 86px
+  background-color: #0B351D
+  display: flex
+  justify-content: space-between
+  padding: 0 10.1333%
+  box-sizing: border-box
+.btn-img-footer
+  height: 41px
+  width: 140px
+  background: none
+  color: #E3CEA3
+  font-size: 12px
+  line-height: 15px
+  font-family: "CP-Bold", sans-serif
+  text-transform: uppercase
+  margin-top: 31px
+  &.link-call
+  text-align: center
+  text-decoration: none
+  line-height: 41px
+  position: relative
+.link-call:before
+  content: ""
+  display: block
+  width: 17px
+  height: 17px
+  position: absolute
+  top: -15px
+  left: 63px
+  background-image: url(../img/phone-call.svg)
+  background-repeat: no-repeat
+  background-size: cover
+.order-btn
+  position: relative
+  &:before
+    content: ""
+    display: block
+    width: 14px
+    height: 15px
+    background-image: url(../img/fill.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    top: -15px
+    left: 60px
+.block-obj-place
+  padding: 54px 0 50px 10.1333%
+  text-align: center
+  position: relative
+  .adress
+    svg
+      width: 20px
+      height: 20px
+      position: absolute
+      left: -29px
+      top: -1px
+.adress
+  position: relative
+  color: #9E7B56
+  font-size: 14px
+  line-height: 18px
+  font-family: "CP-Bold", sans-serif
+  margin-left: 29px
+  width: fit-content
+.adress-block-top .adress:before
+  content: ""
+  display: inline-block
+  top: 0px
+  left:  -29px
+  position: absolute
+  background-image: url('../img/point.svg')
+  background-repeat: no-repeat
+  background-size: cover
+  width: 20px
+  height: 20px
+.adress-param
+  margin-top: 33px
+  margin-left: 31.8042%
+  width: 102px
+  position: relative
+  text-align: left
+  font-family: "CP-Bold", sans-serif
+  font-size: 14px
+  &:nth-of-type(2)
+    width: 99px
+  &:nth-of-type(4)
+    width: 140px
+  &:before
+    position: absolute
+    content: ''
+    display: block
+    width: 30px
+    height: 30px
+    left: -47px
+    top: 2px
+  span
+    color: #9E7B56
+    position: relative
+    &:after
+      position: absolute
+      content: url("../img/car.svg")
+      width: 16px
+      height: 12px
+      display: block
+      right: -26px
+      top: 2px
+.adress-param:nth-of-type(2):before,.adress-param:nth-of-type(4):before
+  content: ""
+  display: block
+  position: absolute
+  top: 5px
+  left: -52px
+  width: 30px
+  height: 30px
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url("../img/metro-orange.svg")
+.adress-param:nth-of-type(3):before
+  content: ""
+  background-image: url("../img/metro-pink.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  left: -52px
+.dop-img-text,.dop-img-wrap
+  height: 249px
+  box-sizing: border-box
+.dop-img-wrap
+  img
+    width: 100%
+    height: 100%
+    object-fit: fill
+.dop-img-text
+  background-color: #0B351D
+  background-image: url(../img/bg-green-dots.svg)
+  background-repeat: no-repeat
+  background-position: left bottom
+  color: #E3CEA3
+  font-size: 24px
+  line-height: 30px
+  padding: 55px 18.6667% 0 18.6667%
+  box-sizing: border-box
+  position: relative
+  font-family: "CP-Bold", sans-serif
+  &:before
+    content: ""
+    display: block
+    height: 34px
+    width: 50px
+    background-image: url(../img/tree-icon.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    margin-bottom: 10px
+.text-wrap
+  padding: 50px 10% 50px 10.1333%
+  font-size: 18px
+  line-height: 120%
+  color: #2D2D2D
+  .short-text-obj
+    margin-bottom: 30px
+    font-family: "CP-Bold", sans-serif
+  .text-obj
+    font-weight: normal
+.obj-profit-block
+  height: 210px
+  background-repeat: no-repeat
+  background-size: cover
+  display: flex
+  flex-direction: column
+  padding: 10% 24px 10.1333%
+  box-sizing: border-box
+  .title-profit-block
+    margin-top: auto
+    font-size: 22px
+    font-family: "CP-Bold", sans-serif
+    color: #FFFFFF
+  &:nth-of-type(1)
+    background-image: url("../img/profit-1-img.jpg")
+  &:nth-of-type(2)
+    background-image: url("../img/profit-2-img.jpg")
+  &:nth-of-type(3)
+    background-image: url("../img/profit-3-img.jpg")
+  &:nth-of-type(4)
+    background-image: url("../img/profit-4-img.jpg")
+  &:nth-of-type(5)
+    background-image: url("../img/profit-5-img.jpg")
+.ft-24
+  font-size: 24px
+.ft-18
+  font-size: 18px
+.obj-parametrs-wrap
+  padding: 50px 16% 240px 16%
+  display: grid
+  grid-template-columns: 1fr 1fr
+  .obj-parametr-block
+    margin-bottom: 68px
+    position: relative
+    font-size: 16px
+    line-height: 24px
+    font-weight: bold
+    width: fit-content
+    &:nth-of-type(even)
+      margin-left: auto
+    &:before
+      content: ""
+      display: block
+    &:nth-of-type(odd)
+      margin-right: 20px
+    &:nth-of-type(1):before
+      width: 40px
+      height: 40px
+      background-image: url("../img/crane.svg")
+      margin-bottom: 23px
+    &:nth-of-type(2):before
+      width: 40px
+      height: 40px
+      background-image: url("../img/hotel.svg")
+      margin-bottom: 23px
+    &:nth-of-type(3):before
+      width: 31px
+      height: 31px
+      background-image: url("../img/building.svg")
+      margin-bottom: 18px
+      margin-top: 11px
+    &:nth-of-type(4):before
+      width: 50px
+      height: 50px
+      background-image: url("../img/garage.svg")
+      margin-bottom: 11px
+    span
+      color: #9E7B56
+      font-size: 14px
+      line-height: 21px
+footer
+  background-color: #F8F1E2
+  padding: 25px 22%
+  display: flex
+  flex-direction: column
+  align-items: center
+  .social-link-wrap
+    display: flex
+    justify-content: space-between
+    width: 150px
+    .social-link
+      width: 35px
+      height: 35px
+      a
+        display: block
+        height: 100%
+        width: 100%
+        background-repeat: no-repeat
+  .btn-signup-viewing
+    background-color: #E3CEA3
+    font-size: 12px
+    font-weight: bold
+    width: 100%
+    height: 50px
+    text-transform: uppercase
+    margin-top: 28px
+    padding: 0
+  .right-text
+    font-size: 12px
+    line-height: 146%
+    margin-top: 28px
+.faceb-link
+  background-image: url("../img/icons.svg")
+  background-position: 11px
+.twiter-link
+  background-image: url("../img/icons.svg")
+  background-position: -35px
+.insta-link
+  background-image: url("../img/icons.svg")
+  background-position: -86px
+@media screen and (min-width: 768px)
+  header
+    padding: 0 7.2917%
+    .tel-block
+      display: block
+      margin-left: auto
+      .tel-link-call
+        color: #E3CEA3
+        font-size: 22px
+        letter-spacing: 1px
+        font-family: "CP-Bold", sans-serif
+        text-decoration: none
+        margin-left: auto
+    .link-callback
+      color: #9FC460
+      font-size: 14px
+      letter-spacing: 1px
+      font-family: "CP-Bold", sans-serif
+      text-decoration: none
+    .btn-new-order
+      margin-left: 30px
+  .main-img-block
+    height: 433px
+  .tel-block
+    display: none
+  .prod-text-wrap
+    margin: auto 7.2917% 60px 7.2917%
+  .adress
+    position: absolute
+    top: -50px
+    font-size: 18px
+    width: initial
+  .block-obj-place
+    display: flex
+    justify-content: space-between
+    padding: 50px 7.2917%
+    .adress
+      margin-left: 0
+      &:bofore
+        display: none
+  .adress-param
+    margin-left: 47px
+    margin-top: 0
+    font-size: 16px
+    &:nth-of-type(4)
+      width: 142px
+    &:nth-of-type(3):before
+      top: 5px
+  .dop-img-block
+    display: flex
+    .dop-img-text
+      width: 50.7813%
+      padding: 50px 7.359% 44px 7.359%
+    .dop-img-wrap
+      width: 49.0885%
+  .obj-profits-wrap
+    padding: 0 7.2917%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-auto-rows: 310px
+    .obj-profit-block
+      padding: 40px 4.4207%
+      height: initial
+      &:nth-of-type(1)
+        grid-column-start: 1
+        grid-column-end: 3
+      &:nth-of-type(2)
+        grid-column-start: 1
+        grid-column-end: 3
+      &:nth-of-type(3)
+        background-position: top
+      &:nth-of-type(4)
+        grid-row-start: 4
+        grid-row-end: 5
+        background-position: top
+      &:nth-of-type(5)
+        background-image: url(../img/profit-5-img-pad.jpg)
+        grid-row-start: 3
+        grid-row-end: 5
+  .obj-parametrs-wrap
+    padding: 46px 7.2917% 180px
+    display: flex
+    justify-content: space-between
+    .obj-parametr-block
+      margin-bottom: 0
+      margin-left: 47px
+      &:before
+        margin: 0
+        position: absolute
+        left: -47px
+        top: 0
+      &:nth-of-type(odd)
+        margin-right: 0
+      &:nth-of-type(even)
+        margin-left: 53px
+  .text-wrap
+    padding-left: 7.2917%
+    padding-right: 7.2917%
+  footer
+    flex-direction: row-reverse
+    padding: 50px 7.2917% 40px
+    justify-content: space-between
+    .right-text,.btn-signup-viewing
+      margin: 0
+      width: 250px
+    .right-text
+      order: 2
+    .social-link-wrap
+      order: 2
+      margin-right: 15px
+  .mobile-img-footer
+    display: none
+  .mobile-menu
+    padding: 80px 7.2917%
+    &.active
+      display: flex
+      .adress-block-top
+        opacity: 1
+      .interes-link-wrap
+        opacity: 1
+    .interes-link-wrap
+      margin-left: 60px
+      margin-top: 6px
+      opacity: 0
+    .adress-block-top
+      margin-top: 287px
+      margin-left: 224px
+      position: absolute
+      height: 40px
+      width: 364px
+      opacity: 0
+      .adress
+        display: block
+        span
+          display: inline
+  footer
+    .right-text
+      width: 31%
+@media screen and (min-width: 1152px)
+  header
+    position: absolute
+    height: 675px
+    width: 26.9097%
+    max-width: 350px
+    background-color: rgba(11, 53, 29, 0.9)
+    z-index: 1
+    flex-direction: column
+    box-sizing: border-box
+    padding: 39px 6.0764%
+    .logo-wrap
+      height: 108px
+      width: 100%
+      text-align: left
+      img
+        height: 100%
+    .btn-new-order
+      margin: auto 0 0
+      width: 100%
+      height: 50px
+    .btn-mobile-menu
+      display: none
+    .tel-block
+      display: none
+  .main-img-block
+    height: 675px
+    background-image: url(../img/main-img-big.jpg)
+    .prod-text-wrap
+      margin: auto 10% 40px 30.6424%
+  .adress
+    display: block
+    position: relative
+    top: initial
+    span
+      display: block
+      text-align: left
+  .block-obj-place
+    padding: 45px 6.0764% 54px
+    .adress
+      margin-left: 51px
+      svg
+        width: 37px
+        height: 37px
+        position: absolute
+        left: -51px
+        top: 1px
+        path
+          fill: #0B351D
+        ellipse
+          fill: #0B351D
+      &:before
+        display: none
+    .adress-param
+      font-size: 18px
+      &:nth-of-type(4)
+        width: 160px
+      &:before
+        width: 37px
+        height: 37px
+  .dop-img-block
+    margin: 0 6.0764%
+    height: 328px
+    .dop-img-text
+      font-size: 36px
+      height: 100%
+      line-height: 100%
+      padding-top: 65px
+      background-size: contain
+      &:before
+        margin-bottom: 19px
+        width: 65px
+        height: 44px
+    .dop-img-wrap
+      height: 100%
+  .text-wrap
+    padding: 63px 6.0764%
+  .obj-profits-wrap
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-auto-rows: 254px
+    padding: 0 6.0764%
+    .obj-profit-block
+      &:nth-of-type(3)
+        grid-column-start: 3
+        grid-column-end: 4
+        grid-row-start: 1
+        grid-row-end: 2
+      &:nth-of-type(5)
+        grid-column-start: 4
+        grid-column-end: 5
+        grid-row-start: 1
+        grid-row-end: 3
+      &:nth-of-type(4)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-start: 2
+        grid-row-end: 3
+      &:nth-of-type(2)
+        grid-column-start: 2
+        grid-column-end: 4
+        grid-row-start: 2
+        grid-row-end: 3
+  .mobile-menu
+    width: 26.9097%
+    max-width: 350px
+    background: none
+    height: 60%
+    margin-top: 160px
+    padding-top: 0
+    padding-right: 0
+    padding-left: 6.0764%
+    transform: translateX(0)
+    .interes-link-wrap
+      margin-left: 30px
+      margin-top: 20px
+      opacity: 1
+    .tel-block
+      display: block
+      margin-top: 25px
+  .adress-block-top
+    display: none
+  .obj-parametrs-wrap
+    font-size: 18px
+    line-height: 27px
+    padding: 51px 6.0764% 304px
+    .obj-parametr-block
+      span
+        font-size: 16px
+        line-height: 24px
+  footer
+    padding: 50px 6.0764% 40px
+    .right-text
+      font-size: 14px
+@media screen and (min-width: 1440px)
+  header
+    height: 828px
+    width: 350px
+    background-color: rgba(11, 53, 29, 0.9)
+    z-index: 1
+    flex-direction: column
+    box-sizing: border-box
+    padding: 28px 81px 39px 90px
+    .logo-wrap
+      height: 165px
+      img
+        margin-left: -31px
+  .main-img-block
+    height: 828px
+    .prod-text-wrap
+      margin-bottom: 90px
+      .prod-text-start
+        font-size: 60px
+        line-height: 75px
+      .prod-text-opt
+        font-size: 36px
+        line-height: 34px
+        span
+          &:nth-of-type(1)
+            font-size: 48px
+            line-height: 45px
+          &:nth-of-type(2)
+            font-family: "CP-Regular", sans-serif
+    &:after
+      content: ""
+      display: block
+      width: 21px
+      height: 92px
+      position: absolute
+      bottom: 73px
+      right: 100px
+      background-image: url("../img/scroll.svg")
+      background-repeat: no-repeat
+      background-size: cover
+  .mobile-menu
+    margin-top: 256px
+    width: 350px
+    padding-left: 90px
+  .block-obj-place
+    padding: 38px 10.7639% 37px
+  .dop-img-block
+    height: 366px
+    margin: 0 10.7639%
+    .dop-img-text
+      padding-top: 81px
+  .text-wrap
+    padding: 60px 10.7639% 90px
+  .obj-profits-wrap
+    padding: 0 10.7639%
+  .obj-parametrs-wrap
+    padding: 90px 10.7639% 251px
+  footer
+    padding: 56px 10.7639% 37px
+@media screen and (min-width: 1920px)
+  .main-img-block
+    height: 828px
+    background-image: url(../img/main-img-big.jpg)
+    .prod-text-wrap
+      margin-left: 22.5%
+  .block-obj-place
+    padding: 56px 17.8646% 44px 19.8958%
+  .dop-img-block
+    height: 395px
+    margin: 0 18.2292%
+    .dop-img-text
+      padding-top: 90px
+  .text-wrap
+    padding: 59px 18.2292% 63px
+  .obj-profits-wrap
+    padding: 0 18.2292%
+  .obj-parametrs-wrap
+    padding: 90px 18.2292% 238px
+  footer
+    padding: 62px 18.2292% 37px
